@@ -31,7 +31,7 @@ from datetime import datetime
 # print(os.getcwd())
 # path = os.getcwd()
 # os.chdir(path+'/data')
-list_of_files = glob.glob('*.csv')
+list_of_files = glob.glob('data/*.csv')
 latest_file = max(list_of_files, key=os.path.getctime)
 
 # read csv -> dataframe
