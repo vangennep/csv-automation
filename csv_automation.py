@@ -28,9 +28,9 @@ from datetime import datetime
 """### Read the most recent csv file into a dataframe, then append new line """
 
 # find the most recent csv file in data folder
-print(os.getcwd())
-path = os.getcwd()
-os.chdir(path+'/data')
+# print(os.getcwd())
+# path = os.getcwd()
+# os.chdir(path+'/data')
 list_of_files = glob.glob('*.csv')
 latest_file = max(list_of_files, key=os.path.getctime)
 
@@ -44,7 +44,7 @@ df2.loc[len(df2)] = [df2['run'].iloc[-1]+1, datetime.now().replace(microsecond=0
 date = df2['date'].iloc[-1].strftime('%d-%m-%y_%H%M')
 
 # save new csv with datetime at end of filename
-df2.to_csv(r'new_%s.csv' % (date), index=False)
+df2.to_csv('data/new_%s.csv' % (date), index=False)
 
 """### Check the most recent csv file"""
 
