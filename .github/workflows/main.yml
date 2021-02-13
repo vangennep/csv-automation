@@ -41,8 +41,8 @@ jobs:
         github_token: ${{ secrets.G_TOKEN }}
       
     - name: Sending email report
-      run: |
-        python auto-email.py
       env:
         EMAIL_USER: ${{ secrets.EMAIL_USER }}
         EMAIL_PASS: ${{ secrets.EMAIL_PASS }}
+      run: |
+        python auto-email.py
