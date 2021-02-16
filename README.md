@@ -1,4 +1,6 @@
-# csv-automation
+# This is old and no longer in use as of Feb 14 2021
+
+## csv-automation
 
 Exploring automation tasks with a simple csv.
 Goals:
